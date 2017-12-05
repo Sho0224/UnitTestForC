@@ -23,12 +23,12 @@ RUN mkdir /tool && \
     make check && \
     make install
 
-RUN echo export CPPUTEST_HOME=/tool/cpputest >> ~/.bashrc && \
-    source ~/.bashrc
+# TODO この方法だとsshログインだと動くけどbuild.shで自動化すると動かない
+# RUN echo export CPPUTEST_HOME=/tool/cpputest >> ~/.bashrc && \
+#     source ~/.bashrc
     
 # TODO デフォルトをc99
 
 ADD build.sh /
 
-#ENTRYPOINT ["/build.sh"]
-
+ENTRYPOINT ["/build.sh"]
