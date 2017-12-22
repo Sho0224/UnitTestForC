@@ -1,2 +1,2 @@
 cd /d %~dp0
-vagrant ssh -c "docker run -v /home/bargee/src:/home/src -it admin/gcc clean.sh"
+vagrant ssh -c "docker run -v /home/bargee/src:/home/src -t admin/gcc /clean.sh"
