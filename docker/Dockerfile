@@ -30,5 +30,4 @@ RUN mkdir /tool && \
 # TODO デフォルトをc99
 
 ADD build.sh /
-
-ENTRYPOINT ["/build.sh"]
+ADD clean.sh /
